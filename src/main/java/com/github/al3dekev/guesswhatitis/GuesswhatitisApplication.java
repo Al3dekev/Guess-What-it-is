@@ -11,6 +11,7 @@ public class GuesswhatitisApplication {
 
         initializer TheGame = new initializer("Guess What It Is");
         TheGame.openGameAlert();
+        TheGame.closeGame();
 
     }
 }
