@@ -10,6 +10,7 @@ public class GuesswhatitisApplication {
         SpringApplication.run(GuesswhatitisApplication.class, args);
 
         initializer TheGame = new initializer("Guess What It Is");
+        TheGame.openGameAlert();
 
     }
 }
