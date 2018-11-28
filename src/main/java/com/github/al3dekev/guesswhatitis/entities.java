@@ -23,6 +23,11 @@ public class entities {
 
     public void setStick(int stick) {
         this.stick = stick;
-        this.choosingAStickAlert();
+        if(stick < 1 || stick > 100){
+            System.out.println("Err: Stick of "+this.getName()+" less than 0 or more than 100, try again");
+        } else{
+            this.choosingAStickAlert();
+        }
+
     }
 }

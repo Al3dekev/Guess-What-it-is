@@ -9,7 +9,7 @@ public class master extends entities{
     }
 
     public void goodChoiceAlert(){
-        System.out.print(this.getName()+": That was a good choice ! You won Billy !");
+        System.out.print(this.getName()+": That was a good choice !");
     }
 
     public void introAlert(){
@@ -17,7 +17,7 @@ public class master extends entities{
     }
 
     public void outroAlert(){
-        System.out.println(this.getName()+": Good job, Billy!");
+        System.out.println(this.getName()+": Good job Billy, you won !");
     }
 
 
