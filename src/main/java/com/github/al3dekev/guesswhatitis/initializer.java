@@ -36,11 +36,10 @@ public class initializer {
      * This is the second element
      */
     public void openGame(){
-        //instantiate the game
+        //instantiate the game with entities inside of it
         game gameTurnedOn = new game(getDifficulty());
 
-        //now the player & bot
-        master NPC = new master("NPC",Math.random());
+
 
 
     }

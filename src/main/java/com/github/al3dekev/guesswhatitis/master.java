@@ -1,4 +1,4 @@
 package com.github.al3dekev.guesswhatitis;
 
-public class master {
+public class master extends entities{
 }
