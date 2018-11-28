@@ -21,10 +21,10 @@ public class initializer {
      *
      */
     public void openGameAlert(){
-        System.out.println("Welcome "+getGameName());
+        System.out.println("Welcome in "+getGameName());
         System.out.println("an Infogrames game");
         System.out.println("Please, select your game difficulty:");
-        System.out.println("1:Easy\b2:Normal\b3:Hard");
+        System.out.println("1:Easy\n2:Normal\n3:Hard");
         do {
             setDifficulty(lire.nextInt());
         }while(getDifficulty() < 1 || getDifficulty() > 2);
@@ -38,14 +38,14 @@ public class initializer {
     public void openGame(){
         //instantiate the game with entities inside of it
         game gameTurnedOn = new game(getDifficulty());
-
-
+        gameTurnedOn.createEntities();
+        gameTurnedOn.turn();
 
 
     }
 
     public void closeGame(){
-
+        System.exit(0);
     }
 
     public String convertDifficulty(){
