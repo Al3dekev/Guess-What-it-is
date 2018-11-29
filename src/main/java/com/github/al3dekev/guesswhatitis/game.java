@@ -94,7 +94,7 @@ public class game {
     }
 
     public void loseAlert(){
-        System.out.println("You lost.");
+        System.out.println("You lose.");
     }
 
 
