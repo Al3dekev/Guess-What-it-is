@@ -51,7 +51,7 @@ public class game {
         NPC.introAlert();
 
             for(x = 0; x<this.getTurnNumber(); x++){
-                choiceAndTurnAlert(x);
+                this.choiceAndTurnAlert(x);
 
                 if(player.getStick() == NPC.getStick()){
                     NPC.goodChoiceAlert();
@@ -77,16 +77,18 @@ public class game {
         System.out.println("left Turns: " + (getTurnNumber()-x));
         System.out.println("Please, choose a number:");
 
-        do {
-            try {
-                do {
-                    player.setStick(lire.nextInt());
-                } while (player.getStick() < this.getLower() || player.getStick() > this.getHigher());
-            } catch (InputMismatchException e) {
+
+        while(!lire.hasNextInt()){
+            do {
+                lire.next();
+            }while(player.getStick() < this.getLower() || player.getStick() > this.getHigher());
+
+            if(!lire.hasNextInt()){
                 System.out.println("Please, enter a number, and between " + this.getLower() + " and " + this.getHigher() + " only");
-                this.lire = new Scanner(System.in);
             }
-        } while(player.getStick() < this.getLower() || player.getStick() > this.getHigher());
+        }
+        player.setStick(lire.nextInt());
+
 
     }
 
