@@ -1,6 +1,8 @@
 package com.github.al3dekev.guesswhatitis;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
+
 
 public class game {
 
@@ -74,9 +76,18 @@ public class game {
     public void choiceAndTurnAlert(int x){
         System.out.println("left Turns: " + (getTurnNumber()-x));
         System.out.println("Please, choose a number:");
+
         do {
-            player.setStick(lire.nextInt());
-        }while(player.getStick() < this.getLower() || player.getStick() > this.getHigher());
+            try {
+                do {
+                    player.setStick(lire.nextInt());
+                } while (player.getStick() < this.getLower() || player.getStick() > this.getHigher());
+            } catch (InputMismatchException e) {
+                System.out.println("Please, enter a number, and between " + this.getLower() + " and " + this.getHigher() + " only");
+                this.lire = new Scanner(System.in);
+            }
+        } while(player.getStick() < this.getLower() || player.getStick() > this.getHigher());
+
     }
 
     public void closeRangeChoiceAlert(){
