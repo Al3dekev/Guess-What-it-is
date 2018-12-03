@@ -33,7 +33,7 @@ public class game {
 
 
         //player
-        System.out.println("Choose you name: ");
+        System.out.println("Choose your name: ");
         player.setName(lire.nextLine());
 
         //NPC
