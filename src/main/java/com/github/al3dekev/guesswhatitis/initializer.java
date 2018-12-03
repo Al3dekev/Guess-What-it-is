@@ -27,25 +27,22 @@ public class initializer {
         System.out.println("Please, select your game difficulty:");
         System.out.println("1:Easy\n2:Normal\n3:Hard");
 
+
+
         do {
-            try {
-                do {
-                    setDifficulty(lire.nextInt());
-                }while(getDifficulty() < 1 || getDifficulty() > 2);
-                System.out.println("You've choosen the "+convertDifficulty()+" difficulty");
-            } catch (InputMismatchException e) {
-                System.out.println("Please, enter a number");
-                this.lire = new Scanner(System.in);
+            while(!lire.hasNextInt()){
+
+                lire.next();
+
+                if(!lire.hasNextInt()){
+                    System.out.println("Please, enter a number");
+                }
             }
-        } while(getDifficulty() < 1 || getDifficulty() > 2);
-        this.openGame();
-
-
-        /*do {
             setDifficulty(lire.nextInt());
         }while(getDifficulty() < 1 || getDifficulty() > 2);
         System.out.println("You've choosen the "+convertDifficulty()+" difficulty");
-        this.openGame();*/
+        this.openGame();
+
     } // OpenGameAlert - end
 
     /**

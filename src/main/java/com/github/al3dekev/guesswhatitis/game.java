@@ -77,18 +77,17 @@ public class game {
         System.out.println("left Turns: " + (getTurnNumber()-x));
         System.out.println("Please, choose a number:");
 
+        do {
+            while(!lire.hasNextInt()){
 
-        while(!lire.hasNextInt()){
-            do {
-                lire.next();
-            }while(player.getStick() < this.getLower() || player.getStick() > this.getHigher());
+                    lire.next();
 
-            if(!lire.hasNextInt()){
-                System.out.println("Please, enter a number, and between " + this.getLower() + " and " + this.getHigher() + " only");
+                if(!lire.hasNextInt()){
+                    System.out.println("Please, enter a number, and between " + this.getLower() + " and " + this.getHigher() + " only");
+                }
             }
-        }
-        player.setStick(lire.nextInt());
-
+            player.setStick(lire.nextInt());
+        }while(player.getStick() < this.getLower() || player.getStick() > this.getHigher());
 
     }
 
