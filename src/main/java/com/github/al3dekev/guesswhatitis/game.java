@@ -37,7 +37,7 @@ public class game {
         //NPC
         NPC.setName("NPC");
         int r = (int) (Math.random() * (this.getLower() - this.getHigher())) + this.getHigher();
-        System.out.println(r);
+        //System.out.println(r); used to know the choosen number of NPC
         NPC.setStick(r);
 
 
