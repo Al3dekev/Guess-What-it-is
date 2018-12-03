@@ -39,7 +39,10 @@ public class initializer {
                 }
             }
             setDifficulty(lire.nextInt());
-        }while(getDifficulty() < 1 || getDifficulty() > 2);
+            if(getDifficulty() > 0 || getDifficulty() < 4){
+                System.out.println("Please, select a valid number");
+            }
+        }while(getDifficulty() < 1 || getDifficulty() > 3);
         System.out.println("You've choosen the "+convertDifficulty()+" difficulty");
         this.openGame();
 
