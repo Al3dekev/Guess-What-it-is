@@ -22,9 +22,9 @@ public class initializer {
      *
      */
     public void openGameAlert(){
-        System.out.println("Welcome in "+getGameName());
+        System.out.println("\n\n\nWelcome in "+getGameName());
         System.out.println("an Infogrames game");
-        System.out.println("Please, select your game difficulty:");
+        System.out.println("\nPlease, select your game difficulty:");
         System.out.println("1:Easy\n2:Normal\n3:Hard");
 
 
@@ -34,9 +34,9 @@ public class initializer {
 
                 lire.next();
 
-                if(!lire.hasNextInt()){
+                /*if(!lire.hasNextInt()){ //Not working
                     System.out.println("Please, enter a number");
-                }
+                }*/
             }
             setDifficulty(lire.nextInt());
             if(getDifficulty() > 0 || getDifficulty() < 4){
